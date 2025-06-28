@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+      "target": "es2020",          // Target JavaScript version
+      "module": "commonjs",        // Module system
+      "lib": ["es2020"],          // Library files
+      "outDir": "./dist",         // Output directory
+      "rootDir": "./src",         // Source directory
+      "strict": true,             // Enable strict mode
+      "esModuleInterop": true,    // Enable ES modules
+      "skipLibCheck": true,       // Skip type checking of declaration files
+      "forceConsistentCasingInFileNames": true,
+      "moduleResolution": "node", // Use Node.js module resolution
+      "resolveJsonModule": true,  // Allow importing JSON files
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "baseUrl": ".",
+      "paths": {
+        "@domain/*": ["src/domain/*"],
+        "@application/*": ["src/application/*"],
+        "@infrastructure/*": ["src/infrastructure/*"],
+        "@api/*": ["src/api/*"]
+      }
+    },
+    "include": ["src/**/*"],      // Include all files in src directory
+    "exclude": ["node_modules", "dist"]  // Exclude node_modules and dist
+}
